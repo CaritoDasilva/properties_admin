@@ -14,11 +14,11 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route exact path="/">
+            <PropertiesList/>
+          </Route>
           <Route exact path="/nueva-propiedad">
             <NewProperty />
-          </Route>
-          <Route exact path="/propiedades">
-            <PropertiesList/>
           </Route>
           <Route exact path="/ver-propiedad/:id">
             <DetailProperty/>
