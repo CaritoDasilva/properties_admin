@@ -48,7 +48,7 @@ const PropertiesList = () => {
 
     return (
         <div>
-            <Link to="/nueva-propiedad"></Link>
+            <Link to="/nueva-propiedad">Agregar nueva propiedad</Link>
             <h1>Propiedades:</h1>
             <div className={styles.listContainer}>
                 { list?.map(property => (
