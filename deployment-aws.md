@@ -51,12 +51,11 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash
 nvm install v14
 ```
 
+-   [ ] Escribir source ~/.bashrc para actualizar cambios
 -   [ ] Averiguar `node -v`
 -   [ ] Averiguar `npm -v`
 -   [ ] Si npm no está `sudo apt install npm`
 -   [ ] sudo apt install build-essential
--   [ ] sudo apt install build-essential
--   [ ] Escribir source ~/.bashrc para actualizar cambios
 
 # Copiar y Probar Proyecto en Servidor
 
