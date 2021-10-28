@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from './PropertiesList.module.scss';
 import { Button, Form } from 'react-bootstrap';
 import axios from 'axios';
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { changePropertyFromService } from "../services/propertyServices";
 
 const PropertiesList = () => {
@@ -48,6 +48,7 @@ const PropertiesList = () => {
 
     return (
         <div>
+            <Link to="/nueva-propiedad"></Link>
             <h1>Propiedades:</h1>
             <div className={styles.listContainer}>
                 { list?.map(property => (
