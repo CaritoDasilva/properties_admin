@@ -15,8 +15,16 @@ module.exports.findOneSingleProperty = (req, res) => {
 module.exports.createNewProperty = (req, res) => {
     Property.create(req.body)
         .then(newlyCreatedProperty => res.json({ property: newlyCreatedProperty }))
-        // .catch(err => res.json({ message: "Something went wrong", error: err }));
-        .catch(err => res.status(400).json(err))
+        .catch(err => {
+            if(err?.name === 'ValidationError') {
+                console.error(err.errors)
+                const errors = Object.values(err.errors).map(val => `${val.path}: ${val.message}`);
+                return res.status(500).json({errors: errors})
+
+            }
+            console.log("🚀 ~ file: user.controller.js ~ line 8 ~ err", err)
+        
+        })
 };
 
 module.exports.updateExistingProperty = (req, res) => {
