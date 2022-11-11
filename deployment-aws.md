@@ -69,7 +69,7 @@ nvm install v14
 -   [ ] sudo rm -rf /var/www/html
 -   [ ] sudo mv build /var/www/html
 -   [ ] sudo service nginx restart
--   [ ] sudo grep -rl localhost /var/www/html | xargs sed -i 's/http:\/\/localhost:8000//g'
+-   [ ] sudo grep -rl localhost /var/www/html | xargs sed -i 's/http:\/\/localhost:8080//g'
 -   [ ] Ya deberías poder ver en la url que antes veíamos NGYNX el cliente que creaste en tu proyecto
 
 # Configuración backend
@@ -101,7 +101,7 @@ server {
     index index.html index.htm index.nginx-debian.html;
     server_name <nombre_proyecto>;
     location /api {
-        proxy_pass http://localhost:8000;
+        proxy_pass http://localhost:8080;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
