@@ -43,15 +43,13 @@ sudo apt install nginx git -y
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash
 ```
-
+-   [ ] Escribir source ~/.bashrc para actualizar cambios
 -   [ ] Averiguar `nvm --version`. Si no sale bien, da un `exit` para salir del servidor y volver a entrar usando la flecha de arriba ENTER
 -   [ ] Instalar node
 
 ```
 nvm install v14
 ```
-
--   [ ] Escribir source ~/.bashrc para actualizar cambios
 -   [ ] Averiguar `node -v`
 -   [ ] Averiguar `npm -v`
 -   [ ] Si npm no está `sudo apt install npm`
